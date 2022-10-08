@@ -19,7 +19,7 @@
 
         <androidx.core.widget.ContentLoadingProgressBar
             android:id="@+id/progressBar"
-            android:indeterminateTint="?attr/colorAccent"
+            android:indeterminateTint="@android:color/system_accent1_700"
             style="@style/Widget.AppCompat.ProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

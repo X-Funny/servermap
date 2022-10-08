@@ -57,7 +57,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/teal_700"
+                app:cardBackgroundColor="@color/material_dynamic_neutral40"
                 app:cardCornerRadius="@dimen/card_corner_radius">
 
                 <LinearLayout
