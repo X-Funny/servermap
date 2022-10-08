@@ -2,8 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
     android:layout_marginTop="0dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:rotationY="6">
 
 
     <TextView
@@ -30,15 +32,22 @@
         android:layout_marginLeft="5dp"
         android:text="UrbanConstruction服务器专用"
         android:textSize="50px" />
-<!--
-    <TextView
-        android:id="@+id/members"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="4dp"
-        android:text="成员"
-        android:textSize="50px" />
-        -->
+
+    <WebView
+        android:id="@+id/webview1"
+        android:layout_width="365dp"
+        android:layout_height="503dp"
+        android:alpha="@dimen/material_emphasis_high_type" />
+    <!--
+        <TextView
+            android:id="@+id/members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:text="成员"
+            android:textSize="50px" />
+            -->
+
 
 </LinearLayout>
