@@ -51,13 +51,13 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/overworld"
                 android:layout_width="match_parent"
-                android:layout_height="82dp"
+                android:layout_height="@dimen/card_height"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="16dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/material_dynamic_neutral_variant30"
+                app:cardBackgroundColor="@color/teal_700"
                 app:cardCornerRadius="@dimen/card_corner_radius">
 
                 <LinearLayout
@@ -66,7 +66,7 @@
                     android:gravity="center|left">
                     <TextView
                         android:paddingLeft="24dp"
-                        android:textSize="16dp"
+                        android:textSize="16sp"
                         android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -77,9 +77,8 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/metro"
                 android:layout_width="match_parent"
-                android:layout_height="82dp"
+                android:layout_height="@dimen/card_height"
                 android:layout_marginHorizontal="16dp"
-
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
@@ -108,50 +107,3 @@
     </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".MainActivity">-->
-
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="476dp"-->
-<!--        android:layout_height="729dp"-->
-<!--        android:orientation="vertical"-->
-<!--        tools:ignore="MissingConstraints"-->
-<!--        tools:layout_editor_absoluteX="1dp"-->
-<!--        tools:layout_editor_absoluteY="1dp">-->
-
-
-<!--        <Button-->
-<!--            android:id="@+id/metro"-->
-<!--            style="@style/Widget.AppCompat.Button.Colored"-->
-<!--            android:layout_width="189dp"-->
-<!--            android:layout_height="155dp"-->
-<!--            android:layout_alignParentLeft="false"-->
-<!--            android:layout_gravity="center_vertical"-->
-<!--            android:backgroundTint="#009688"-->
-<!--            android:backgroundTintMode="src_in"-->
-<!--            android:text="地铁线路图"-->
-<!--            tools:ignore="MissingConstraints" />-->
-
-
-
-
-<!--        <Button-->
-<!--            android:id="@+id/overworld"-->
-<!--            android:layout_width="191dp"-->
-<!--            android:layout_height="156dp"-->
-<!--            android:backgroundTintMode="src_atop"-->
-<!--            android:text="地形图"-->
-<!--            tools:ignore="MissingConstraints" />-->
-
-
-
-<!--    </LinearLayout>-->
-
-
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

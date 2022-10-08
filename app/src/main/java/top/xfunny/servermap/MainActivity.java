@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     MaterialCardView mBtnOverworld;
     MaterialCardView mBtnMetro;
-    Intent intent1,intent2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,14 +30,13 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()){
                 case R.id.menu_about:
                     // TODO：关于按钮
-                    intent1 = new Intent(MainActivity.this, about.class);
-                    startActivity(intent1);
+                    startActivity(new Intent(MainActivity.this, AboutActivity.class));
                     break;
             }
             return true;
         });
 
-    };
+    }
 
     public void bindView() {
         toolbar = findViewById(R.id.toolbar);
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main,menu);
         return true;
     }
@@ -57,12 +57,10 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.overworld:
-                    intent1 = new Intent(MainActivity.this, OverworldActivity.class);
-                    startActivity(intent1);
+                    startActivity(new Intent(MainActivity.this, OverworldActivity.class));
                     break;
                 case R.id.metro:
-                    intent2 = new Intent(MainActivity.this, MetroActivity.class);
-                    startActivity(intent2);
+                    startActivity(new Intent(MainActivity.this, MetroActivity.class));
                     break;
             }
 

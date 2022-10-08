@@ -1,14 +1,15 @@
 package top.xfunny.servermap;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class about extends AppCompatActivity {
+import top.xfunny.servermap.ui.activity.WebActivity;
+
+public class AboutActivity extends WebActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+
     }
 }
