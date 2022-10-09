@@ -18,6 +18,7 @@ public class AboutActivity extends AppCompatActivity {
         WebView.loadUrl("http://112.124.52.20:13000");
         WebSettings webSettings = WebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        WebView.setWebViewClient(new WebViewClient());
 
     }
 }
