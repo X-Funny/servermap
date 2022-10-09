@@ -10,6 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.card.MaterialCardView;
+import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import java.util.Timer;
+import java.util.TimerTask;
+import android.os.Handler;
+import android.os.Message;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +44,18 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
+
+
+
+
+
+
+
+
     }
+
+
+
 
     public void bindView() {
         toolbar = findViewById(R.id.toolbar);
@@ -63,6 +82,16 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, MetroActivity.class));
                     break;
             }
+
+        }
+
+        {
+            setContentView(R.layout.activity_main);
+            WebView WebView = (WebView) findViewById(R.id.webview1);
+            WebView.loadUrl("http://112.124.52.20:5900");
+            WebSettings webSettings = WebView.getSettings();
+            webSettings.setJavaScriptEnabled(true);
+            webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
         }
     }
