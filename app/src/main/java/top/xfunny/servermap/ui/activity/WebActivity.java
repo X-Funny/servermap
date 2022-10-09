@@ -3,8 +3,10 @@ package top.xfunny.servermap.ui.activity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -50,6 +52,7 @@ public class WebActivity extends AppCompatActivity {
 
         mWebSettings = mWebView.getSettings();
         mWebSettings.setJavaScriptEnabled(true);
+        WebView.setWebContentsDebuggingEnabled(true);
         mWebView.addJavascriptInterface(new JSInterface() {
         }, "ajs");
 
@@ -86,6 +89,8 @@ public class WebActivity extends AppCompatActivity {
                                 mPgBar.setVisibility(View.GONE);
                             }
                         });
+
+                WebActivity.this.onPageFinished(view, url);
             }
         });
     }
@@ -93,6 +98,8 @@ public class WebActivity extends AppCompatActivity {
     public void loadUrl(String url) {
         if (mWebView != null) mWebView.loadUrl(url);
     }
+
+    protected void onPageFinished(WebView view, String url){}
 
     public WebSettings getWebSettings() {
         return mWebSettings;
@@ -107,14 +114,15 @@ public class WebActivity extends AppCompatActivity {
 
         @JavascriptInterface
         public int getStatusBarHeight() {
-            int height = 0;
-            int resourceId = getApplicationContext().getResources().getIdentifier("status_bar_height", "dimen", "android");
-            if (resourceId > 0) {
-                height = getApplicationContext().getResources().getDimensionPixelSize(resourceId);
-            }
+//            int height = 0;
+//            int resourceId = getApplicationContext().getResources().getIdentifier("status_bar_height", "dimen", "android");
+//            if (resourceId > 0) {
+//                height = getApplicationContext().getResources().getDimensionPixelSize(resourceId);
+//            }
 
-            return height;
+            DisplayMetrics dm = WebActivity.this.getResources().getDisplayMetrics();
+
+            return (int) (12f * (dm.densityDpi / 160f));
         }
     }
 }
-

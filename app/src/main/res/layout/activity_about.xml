@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="20dp"
     android:layout_marginTop="0dp"
-    android:orientation="vertical"
-    android:rotationY="6">
+    android:orientation="vertical">
 
 
     <TextView
@@ -14,8 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="ServerMap"
-        android:textColor="@color/material_dynamic_neutral30"
-        android:textSize="165px" />
+        android:textSize="165dp" />
 
     <TextView
         android:id="@+id/author"
@@ -23,7 +21,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="5dp"
         android:text="WebView:XFunny \nUI框架:SunRt233"
-        android:textSize="50px" />
+        android:textSize="50dp" />
 
     <TextView
         android:id="@+id/server"
@@ -31,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:text="UrbanConstruction服务器专用"
-        android:textSize="50px" />
+        android:textSize="50sp" />
 
     <WebView
         android:id="@+id/webview1"
