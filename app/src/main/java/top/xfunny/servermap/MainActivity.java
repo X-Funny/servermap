@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             webSettings.setJavaScriptEnabled(true);
             webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
+
         }
     }
 }
