@@ -65,13 +65,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center|start">
+
                     <TextView
-                        android:paddingStart="24dp"
-                        android:textSize="16sp"
-                        android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="地形图"/>
+                        android:paddingStart="24dp"
+                        android:text="地形图"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -90,13 +91,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center|start">
+
                     <TextView
-                        android:paddingStart="24dp"
-                        android:textSize="16sp"
-                        android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="地铁线路图"/>
+                        android:paddingStart="24dp"
+                        android:text="地铁线路图"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
 
                 </LinearLayout>
@@ -104,15 +106,21 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-
-            <WebView
-                android:id="@+id/webview1"
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="382dp"
-                android:layout_height="503dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:alpha="@dimen/material_emphasis_high_type"
-                tools:ignore="WebViewLayout" />
+                android:layout_height="503dp">
+
+                <WebView
+                    android:id="@+id/webview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:alpha="@dimen/material_emphasis_high_type"
+                    tools:ignore="WebViewLayout" />
+            </androidx.core.widget.NestedScrollView>
+
+
         </LinearLayout>
 
 

@@ -17,7 +17,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import android.os.Handler;
 import android.os.Message;
-
+import android.webkit.WebViewClient;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     MaterialCardView mBtnOverworld;
     MaterialCardView mBtnMetro;
+    WebView mWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,17 @@ public class MainActivity extends AppCompatActivity {
         mBtnOverworld.setOnClickListener(new ButtonListener());
         mBtnMetro = findViewById(R.id.metro);
         mBtnMetro.setOnClickListener(new ButtonListener());
+        mWebView = findViewById(R.id.webview1);
+
+        mWebView.setWebViewClient(new WebViewClient(){
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                view.scrollTo(0,view.getMeasuredHeight());
+            }
+        });
+
+        mWebView.loadUrl("http://112.124.52.20:5900/");
     }
 
     @Override
@@ -75,17 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-       public void main(String[] args)
-        {
-            setContentView(R.layout.activity_main);
-            WebView WebView = (WebView) findViewById(R.id.webview1);
-            WebView.loadUrl("http://112.124.52.20:5900");
-            WebSettings webSettings = WebView.getSettings();
-            webSettings.setJavaScriptEnabled(true);
-            webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
-
-        }
     }
 }
 
