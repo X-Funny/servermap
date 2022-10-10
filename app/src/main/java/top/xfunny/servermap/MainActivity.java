@@ -43,15 +43,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
-
-
-
-
-
-
-
-
-
     }
 
 
@@ -84,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-
+       public void main(String[] args)
         {
             setContentView(R.layout.activity_main);
             WebView WebView = (WebView) findViewById(R.id.webview1);
