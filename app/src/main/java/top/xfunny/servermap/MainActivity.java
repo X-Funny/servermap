@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
@@ -56,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         mBtnMetro = findViewById(R.id.metro);
         mBtnMetro.setOnClickListener(new ButtonListener());
         mWebView = findViewById(R.id.webview1);
-
         mWebView.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageFinished(WebView view, String url) {
@@ -64,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
                 view.scrollTo(0,view.getMeasuredHeight());
             }
         });
+        WebView myWebView = (WebView) findViewById(R.id.webview1);
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
+
+
+
+
 
         mWebView.loadUrl("http://112.124.52.20:5900/");
     }
@@ -87,8 +95,13 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
+        
 
     }
+
+
+
+
 }
 
 
