@@ -14,7 +14,7 @@ public class MetroActivity extends WebActivity {
         super.onCreate(savedInstanceState);
 
         getWebSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
-        loadUrl("https://playmc.run:34245/");
+        loadUrl("http://playmc.run:34245/");
     }
 
     @Override
