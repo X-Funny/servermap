@@ -10,13 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.card.MaterialCardView;
-import android.os.Bundle;
+
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import java.util.Timer;
-import java.util.TimerTask;
-import android.os.Handler;
-import android.os.Message;
+
 import android.webkit.WebViewClient;
 
 
@@ -73,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        mWebView.loadUrl("http://112.124.52.20:5900/");
+        mWebView.loadUrl("https://pixelcloud.cn/servers/6354ca94f0604200272db299");
     }
 
     @Override

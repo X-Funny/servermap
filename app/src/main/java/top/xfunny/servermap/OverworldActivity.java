@@ -16,7 +16,7 @@ public class OverworldActivity extends WebActivity {
         super.onCreate(savedInstanceState);
 
         getWebSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
-        loadUrl("http://112.124.52.20:5000");
+        loadUrl("https://playmc.fun:40875/");
 
     }
 
